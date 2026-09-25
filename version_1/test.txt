@@ -1,1 +1,5 @@
 this is a test file
+<<<<<<< HEAD
+=======
+Why am I here? 
+>>>>>>> d06e2ebef0e65162a267b6d50a88e01ae1db174f
