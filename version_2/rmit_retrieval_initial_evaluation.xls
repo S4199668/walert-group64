@@ -1,0 +1,5 @@
+﻿question,expected_sources,retrieved_top5,top1_hit,top3_hit,top5_hit
+How do I apply for an assessment extension?,"EXT-01, POL-01","EAA-02, EXT-01, EAA-02, EXT-01, POL-01",False,True,True
+When should I apply for special consideration?,"SC-01, POL-01","SC-01, POL-01, EAA-02, SC-01, SC-01",True,True,True
+What are equitable assessment arrangements and who can receive them?,"EAA-01, EAA-02, POL-01","POL-01, EAA-01, POL-01, POL-01, EAA-02",True,True,True
+How many days can an assessment extension be approved for?,"EXT-01, POL-01","EXT-01, POL-01, EAA-02, EAA-02, EAA-02",True,True,True
