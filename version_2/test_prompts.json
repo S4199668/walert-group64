@@ -47,10 +47,6 @@
         {
             "prompt":"The extensions adjustment is on my ELP, but the assignment brief also says to fill out the standard extension form, do I need to do both, or is my learning plan enough on its own",
             "chunks":["EXT-01_2", "EAA-02_39"]
-        },
-        {
-            "prompt":"",
-            "chunks":[]
         }
     ]
 }
