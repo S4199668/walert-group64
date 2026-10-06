@@ -1,0 +1,4 @@
+﻿metric,value
+Top-1 Hit Rate,0.5
+Top-3 Hit Rate,0.75
+Top-5 Hit Rate,0.9166666666666666

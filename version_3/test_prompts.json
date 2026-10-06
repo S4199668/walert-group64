@@ -1,0 +1,52 @@
+{
+    "tests": [
+        {
+            "prompt":"I've got a timed quiz that I won't be able to complete on time, am I able to get an extension?",
+            "chunks":["EXT-01_1"]
+        },
+        {
+            "prompt":"I've recently lost my job, is this a valid reason to apply for special consideration?",
+            "chunks":["SC-01_7"]
+        },
+        {
+            "prompt":"So my hard drive with my assignment stopped working and I didn't backup my work, will I be able to get an extension or special consideration?",
+            "chunks":["SC-01_16"]
+        },
+        {       
+            "prompt":"I've just booked my first appointment with ELS next week and I'm feeling nervous. Is there anything I need to bring or have ready before I go in?",
+            "chunks":["EAA-02_29"]
+        },
+        {
+            "prompt":"I emailed my course coordinator three days ago asking for an extension and I've heard absolutely nothing back and the due date is tomorrow — what do I do now?",
+            "chunks":["EAA-02_38"]
+        },
+        {
+            "prompt":"Having a hard time reading through journal articles for an assessment as I'm dyslexic, is there some kind of text-to-speech thing RMIT can set me up with?",
+            "chunks":["EAA-02_46"]
+        },
+        {
+            "prompt":"My mate got flagged for plagiarism because he reused part of an assignment he wrote for a different course last year, does RMIT actually define that as plagiarism?",
+            "chunks":["POL-01_70"]
+        },
+        {
+            "prompt":"Who actually sets RMIT's official academic calendar each year? I'm trying to plan around census dates.",
+            "chunks":["POL-01_67"]
+        },
+        {
+            "prompt":"I missed a test because I was unwell, How long do I have to apply for special consideration? I have an EAA deferral thing in my plan.",
+            "chunks":["SC-01_8", "EAA-02_43"]
+        },
+        {
+            "prompt":"My nan just passed away but I've got a group assignment due friday, can I even apply for an extension on something like this? How much extra time could I get?",
+            "chunks":["POL-01_62","EXT-01_1"]
+        },
+        {
+            "prompt":"I think my tutor marked me down assuming I plagiarised, very upset about this because I definitely didn't, how should I go about correcting this issue?",
+            "chunks":["POL-01_58", "POL-01_59"]
+        },
+        {
+            "prompt":"The extensions adjustment is on my ELP, but the assignment brief also says to fill out the standard extension form, do I need to do both, or is my learning plan enough on its own",
+            "chunks":["EXT-01_2", "EAA-02_39"]
+        }
+    ]
+}
