@@ -1,0 +1,6 @@
+﻿lambda,top5,SC-01_8_in_top5,EAA-02_43_in_top5
+0.5,"['SC-01_8', 'SC-01_7', 'EAA-02_43', 'POL-01_63', 'POL-01_62']",True,True
+0.6,"['SC-01_8', 'SC-01_7', 'EAA-02_43', 'POL-01_63', 'POL-01_62']",True,True
+0.7,"['SC-01_8', 'SC-01_7', 'POL-01_63', 'EXT-01_0', 'EAA-02_43']",True,True
+0.8,"['SC-01_8', 'POL-01_63', 'EXT-01_0', 'EAA-02_43', 'SC-01_9']",True,True
+0.9,"['SC-01_8', 'POL-01_63', 'EXT-01_0', 'SC-01_9', 'EAA-02_43']",True,True
