@@ -1,0 +1,104 @@
+{
+    "tests": [
+        {
+            "prompt": "How can I apply for an assignment extension?",
+            "chunks": ["EXT-01_2"]
+        },
+        {
+            "prompt": "How many days can I get an extension for?",
+            "chunks": ["EXT-01_0", "POL-01_62"]
+        },
+        {
+            "prompt": "When should I apply for an extension?",
+            "chunks": ["EXT-01_2", "POL-01_62"]
+        },
+        {
+            "prompt": "Can I apply after my assignment deadline?",
+            "chunks": ["EXT-01_2", "POL-01_63"]
+        },
+        {
+            "prompt": "Can I get an extension for an exam?",
+            "chunks": ["EXT-01_1", "EAA-02_42", "EAA-02_43"]
+        },
+        {
+            "prompt": "What is academic integrity?",
+            "chunks": ["POL-01_59"]
+        },
+        {
+            "prompt": "What is plagiarism?",
+            "chunks": ["POL-01_70"]
+        },
+        {
+            "prompt": "Can I use ChatGPT in my assignment?",
+            "chunks": []
+        },
+        {
+            "prompt": "What happens if I breach academic integrity?",
+            "chunks": ["POL-01_59", "POL-01_70"]
+        },
+        {
+            "prompt": "What is academic misconduct?",
+            "chunks": ["POL-01_59"]
+        },
+        {
+            "prompt": "How do I change my course?",
+            "chunks": ["EAA-02_53"]
+        },
+        {
+            "prompt": "How do I take leave from my program?",
+            "chunks": ["EAA-02_53"]
+        },
+        {
+            "prompt": "What happens if I miss the census date?",
+            "chunks": ["EAA-02_53"]
+        },
+        {
+            "prompt": "How do I cancel my enrolment?",
+            "chunks": ["EAA-02_53"]
+        },
+        {
+            "prompt": "Can international students reduce their study load?",
+            "chunks": []
+        },
+        {
+            "prompt": "What happens if I fail multiple courses?",
+            "chunks": ["POL-01_65", "POL-01_69"]
+        },
+        {
+            "prompt": "What does \"at risk\" mean?",
+            "chunks": ["POL-01_65", "POL-01_69"]
+        },
+        {
+            "prompt": "What is an Academic Performance Improvement Plan?",
+            "chunks": []
+        },
+        {
+            "prompt": "What is a show cause?",
+            "chunks": ["POL-01_65"]
+        },
+        {
+            "prompt": "Can I appeal an academic progress decision?",
+            "chunks": ["POL-01_65"]
+        },
+        {
+            "prompt": "Where can I get study support?",
+            "chunks": ["EAA-02_51"]
+        },
+        {
+            "prompt": "Who can help me with academic problems?",
+            "chunks": ["EAA-02_51", "EAA-02_53"]
+        },
+        {
+            "prompt": "Where can I get financial support?",
+            "chunks": []
+        },
+        {
+            "prompt": "Where can I get wellbeing support?",
+            "chunks": ["EAA-02_52"]
+        },
+        {
+            "prompt": "How do I contact Student Connect?",
+            "chunks": ["EAA-02_53"]
+        }
+    ]
+}
