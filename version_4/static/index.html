@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RMIT Student Support Assistant</title>
+        <link rel="stylesheet" href="./static/style.css" />
+    </head>
+    <body>
+        <aside id="side">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">R</div>
+                <div class="brand-copy">
+                    <span class="brand-name">RMIT</span>
+                    <span class="brand-subtitle">STUDENT SUPPORT</span>
+                </div>
+            </div>
+
+            <div class="sidebar-heading">YOUR CONVERSATIONS</div>
+            <button id="new" type="button">
+                <span aria-hidden="true">＋</span> New chat
+            </button>
+            <div id="list" aria-label="Previous conversations"></div>
+
+            <div class="sidebar-footer">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Student support assistant</span>
+            </div>
+        </aside>
+
+        <main id="main">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">RMIT UNIVERSITY</p>
+                    <h1>Student Support Assistant</h1>
+                </div>
+                <div class="topbar-tag">
+                    <span aria-hidden="true">✦</span> AI-powered guidance
+                </div>
+            </header>
+
+            <section class="chat-shell" aria-label="Chat conversation">
+                <div class="chat-intro">
+                    <div class="intro-icon" aria-hidden="true">✦</div>
+                    <div>
+                        <h2>How can I help you today?</h2>
+                        <p>
+                            Ask about extensions, special consideration, or
+                            equitable assessment arrangements.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    id="log"
+                    role="log"
+                    aria-live="polite"
+                    aria-label="Messages"
+                ></div>
+
+                <div class="composer">
+                    <div class="row">
+                        <input
+                            type="text"
+                            id="msg"
+                            placeholder="Ask a question about assessment support…"
+                            aria-label="Your question"
+                            autofocus
+                        />
+                        <button id="send" type="button">
+                            <span>Send</span>
+                            <span aria-hidden="true">➤</span>
+                        </button>
+                    </div>
+                    <p class="composer-note">
+                        Check official RMIT guidance for the latest requirements
+                        and deadlines.
+                    </p>
+                </div>
+            </section>
+
+            <details class="upload-panel">
+                <summary>
+                    <span class="upload-symbol" aria-hidden="true">↑</span>
+                    <span>
+                        <strong>Manage knowledge sources</strong>
+                        <small>
+                            Add PDF or TXT files to the assistant's knowledge
+                            base
+                        </small>
+                    </span>
+                    <span class="summary-chevron" aria-hidden="true">⌄</span>
+                </summary>
+
+                <div class="upload-content">
+                    <label for="files">Choose documents (.txt / .pdf)</label>
+                    <input type="file" id="files" multiple accept=".txt,.pdf" />
+                    <button id="up" type="button">Upload &amp; embed</button>
+                    <span id="upstatus" role="status"></span>
+                </div>
+            </details>
+        </main>
+
+        <script>
+            let sid = localStorage.getItem("sid") || null;
+
+            const log = document.getElementById("log");
+            const msg = document.getElementById("msg");
+            const list = document.getElementById("list");
+
+            function add(cls, text, note) {
+                const d = document.createElement("div");
+                d.className = cls;
+
+                const s = document.createElement("span");
+                s.textContent = text;
+                d.appendChild(s);
+
+                if (note) {
+                    const n = document.createElement("small");
+                    n.textContent = note;
+                    d.appendChild(n);
+                }
+
+                log.appendChild(d);
+                log.scrollTop = log.scrollHeight;
+            }
+
+            async function refreshList() {
+                const r = await fetch("/api/sessions");
+                if (!r.ok) return;
+
+                list.innerHTML = "";
+
+                for (const s of await r.json()) {
+                    const d = document.createElement("div");
+                    d.className = "item" + (s.id === sid ? " active" : "");
+
+                    const t = document.createElement("div");
+                    t.className = "t";
+                    t.textContent = s.title;
+
+                    const m = document.createElement("div");
+                    m.className = "m";
+                    m.textContent =
+                        new Date(s.updated * 1000).toLocaleString() +
+                        " · " +
+                        s.message_count +
+                        " msgs";
+
+                    d.append(t, m);
+                    d.onclick = () => openChat(s.id);
+                    list.appendChild(d);
+                }
+            }
+
+            async function openChat(id) {
+                sid = id;
+                localStorage.setItem("sid", sid);
+                log.innerHTML = "";
+
+                const r = await fetch("/api/sessions/" + id);
+
+                if (r.ok) {
+                    (await r.json()).forEach((m) =>
+                        add(m.role === "user" ? "u" : "a", m.content),
+                    );
+                }
+
+                refreshList();
+                msg.focus();
+            }
+
+            function newChat() {
+                sid = null;
+                localStorage.removeItem("sid");
+                log.innerHTML = "";
+                refreshList();
+                msg.focus();
+            }
+
+            async function send() {
+                const text = msg.value.trim();
+                if (!text) return;
+
+                msg.value = "";
+                add("u", text);
+
+                try {
+                    const r = await fetch("/api/chat", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            message: text,
+                            session_id: sid,
+                        }),
+                    });
+
+                    if (!r.ok) {
+                        add("a", "Error: " + r.status);
+                        return;
+                    }
+
+                    const d = await r.json();
+
+                    sid = d.session_id;
+                    localStorage.setItem("sid", sid);
+
+                    add(
+                        "a",
+                        d.answer,
+                        d.sources && d.sources.length
+                            ? "Sources: " + d.sources.join(", ")
+                            : "",
+                    );
+
+                    refreshList();
+                } catch (error) {
+                    add(
+                        "a",
+                        "Unable to connect to the server. Please try again.",
+                    );
+                    console.error(error);
+                }
+            }
+
+            document.getElementById("send").onclick = send;
+
+            msg.onkeydown = (e) => {
+                if (e.key === "Enter") send();
+            };
+
+            document.getElementById("new").onclick = newChat;
+
+            document.getElementById("up").onclick = async () => {
+                const fs = document.getElementById("files").files;
+                const st = document.getElementById("upstatus");
+
+                if (!fs.length) {
+                    st.textContent = " Please select a PDF or TXT file.";
+                    return;
+                }
+
+                const fd = new FormData();
+
+                for (const f of fs) {
+                    fd.append("files", f);
+                }
+
+                st.textContent = " Uploading and embedding...";
+
+                try {
+                    const r = await fetch("/api/upload", {
+                        method: "POST",
+                        body: fd,
+                    });
+
+                    if (r.ok) {
+                        const result = await r.json();
+                        st.textContent =
+                            " Done: " + JSON.stringify(result.chunks_added);
+                    } else {
+                        st.textContent = " Upload failed.";
+                    }
+                } catch (error) {
+                    st.textContent = " Could not connect to the server.";
+                    console.error(error);
+                }
+            };
+
+            if (sid) {
+                openChat(sid);
+            } else {
+                refreshList();
+            }
+        </script>
+    </body>
+</html>
