@@ -2,39 +2,48 @@
     "tests": [
         {
             "prompt":"I've got a timed quiz that I won't be able to complete on time, am I able to get an extension?",
-            "chunks":["EXT-01_1"]
+            "chunks":["EXT-01_1"],
+            "answer":["No, you cannot get extensions for timed assessments", "You should apply for special consideration instead"]
         },
         {
             "prompt":"I've recently lost my job, is this a valid reason to apply for special consideration?",
-            "chunks":["SC-01_7"]
+            "chunks":["SC-01_7"],
+            "answer":["Yes, loss of employment is a valid reason to apply for special consideration", "however, it is not guaranteed that you will be granted the special consideration.", "You will need to prove that your loss of employment impacted your ability to complete the assessment."]
         },
         {
             "prompt":"So my hard drive with my assignment stopped working and I didn't backup my work, will I be able to get an extension or special consideration?",
-            "chunks":["SC-01_16"]
+            "chunks":["SC-01_16"],
+            "answer":["No, technical issues that could have been prevented are not grounds for special consideration.", "You should contact your course coordinator immediately to discuss your options."]
         },
         {       
             "prompt":"I've just booked my first appointment with ELS next week and I'm feeling nervous. Is there anything I need to bring or have ready before I go in?",
-            "chunks":["EAA-02_29"]
+            "chunks":["EAA-02_29"],
+            "answer":["Be prepared to discuss how your disability impacts your ability to take part in studies.", "You will need to provide supporting documentation from your registered health practitioner and an ELS registration form"]
         },
         {
-            "prompt":"I emailed my course coordinator three days ago asking for an extension and I've heard absolutely nothing back and the due date is tomorrow — what do I do now?",
-            "chunks":["EAA-02_38"]
+            "prompt":"I emailed my course coordinator three days ago asking for an extension and I've heard absolutely nothing back and the due date is tomorrow, what do I do now?",
+            "chunks":["EAA-02_38"],
+            "answer":["First, try contacting your program manager. If you don't hear back, contact ELS for assistance."]
         },
         {
             "prompt":"Having a hard time reading through journal articles for an assessment as I'm dyslexic, is there some kind of text-to-speech thing RMIT can set me up with?",
-            "chunks":["EAA-02_46"]
+            "chunks":["EAA-02_46"],
+            "answer":["For text-to-speech, RMIT recommends using Immesrsive Reader through Microsoft Edge.", "Other popular screen reading tools include: Speechify Natural Reader Mac VoiceOver User Guide"]
         },
         {
             "prompt":"My mate got flagged for plagiarism because he reused part of an assignment he wrote for a different course last year, does RMIT actually define that as plagiarism?",
-            "chunks":["POL-01_70"]
+            "chunks":["POL-01_70"],
+            "answer":["RMIT does in fact consider self-plagiarism as a form of plagiarism.", "To avoid self-plagiarising, your friend would need to reference their previous assignment properly.", "However, many courses still do not allow self-referencing either."]
         },
         {
             "prompt":"Who actually sets RMIT's official academic calendar each year? I'm trying to plan around census dates.",
-            "chunks":["POL-01_67"]
+            "chunks":["POL-01_67"],
+            "answer":["The university Secretary and Academic Regristrar are the ones responsible for approving the annual Academic Calendar."]
         },
         {
             "prompt":"I missed a test because I was unwell, How long do I have to apply for special consideration? I have an EAA deferral thing in my plan.",
-            "chunks":["SC-01_8", "EAA-02_43"]
+            "chunks":["SC-01_8", "EAA-02_43"],
+            "answer":["You must apply for special consideration within 5 working days after the assessment date or due date.", "Since you have an Equitable Assessment Arrangement you can get the assessment deferred to a later date."]
         },
         {
             "prompt":"My nan just passed away but I've got a group assignment due friday, can I even apply for an extension on something like this? How much extra time could I get?",
