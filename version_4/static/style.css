@@ -721,3 +721,95 @@ button:disabled {
         align-items: flex-start;
     }
 }
+/* Keep the sidebar fixed and scroll conversations independently */
+
+@media (min-width: 561px) {
+    #side {
+        height: 100vh;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    #list {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #777 #171717;
+    }
+
+    .brand,
+    .sidebar-heading,
+    #new,
+    .sidebar-footer {
+        flex-shrink: 0;
+    }
+}
+
+/* Always display the conversation history scrollbar */
+
+@media (min-width: 561px) {
+    #list {
+        max-height: 350px !important;
+        overflow-y: scroll !important;
+        scrollbar-width: auto;
+        scrollbar-color: #e60028 #333333;
+    }
+
+    #list::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    #list::-webkit-scrollbar-track {
+        background: #333333;
+    }
+
+    #list::-webkit-scrollbar-thumb {
+        background: #e60028;
+        border-radius: 6px;
+    }
+}
+
+/* Main chat window - independent vertical scrollbar */
+
+@media (min-width: 561px) {
+
+    .chat-shell {
+        height: 600px;
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .chat-intro {
+        flex-shrink: 0;
+    }
+
+    #log {
+        flex: 1;
+        min-height: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: auto;
+        scrollbar-color: #e60028 #eeeeee;
+    }
+
+    .composer {
+        flex-shrink: 0;
+    }
+
+    #log::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    #log::-webkit-scrollbar-track {
+        background: #eeeeee;
+    }
+
+    #log::-webkit-scrollbar-thumb {
+        background: #e60028;
+        border-radius: 6px;
+    }
+}
