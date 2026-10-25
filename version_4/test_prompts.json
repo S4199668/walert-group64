@@ -1,0 +1,225 @@
+{
+    "tests": [
+        {
+            "prompt": "I've got a timed quiz that I won't be able to complete on time, am I able to get an extension?",
+            "chunks": ["EXT-01_1"],
+            "answer": [
+                "No, you cannot get extensions for timed assessments",
+                "You should apply for special consideration instead"
+            ],
+            "score": 1
+        },
+        {
+            "prompt": "I've recently lost my job, is this a valid reason to apply for special consideration?",
+            "chunks": ["SC-01_7"],
+            "answer": [
+                "Yes, loss of employment is a valid reason to apply for special consideration",
+                "however, it is not guaranteed that you will be granted the special consideration.",
+                "You will need to prove that your loss of employment impacted your ability to complete the assessment."
+            ]
+        },
+        {
+            "prompt": "So my hard drive with my assignment stopped working and I didn't backup my work, will I be able to get an extension or special consideration?",
+            "chunks": ["SC-01_16"],
+            "answer": [
+                "No, technical issues that could have been prevented are not grounds for special consideration.",
+                "You should contact your course coordinator immediately to discuss your options."
+            ]
+        },
+        {
+            "prompt": "I've just booked my first appointment with ELS next week and I'm feeling nervous. Is there anything I need to bring or have ready before I go in?",
+            "chunks": ["EAA-02_29"],
+            "answer": [
+                "Be prepared to discuss how your disability impacts your ability to take part in studies.",
+                "You will need to provide supporting documentation from your registered health practitioner and an ELS registration form"
+            ]
+        },
+        {
+            "prompt": "I emailed my course coordinator three days ago asking for an extension and I've heard absolutely nothing back and the due date is tomorrow, what do I do now?",
+            "chunks": ["EAA-02_38"],
+            "answer": [
+                "First, try contacting your program manager. If you don't hear back, contact ELS for assistance."
+            ]
+        },
+        {
+            "prompt": "Having a hard time reading through journal articles for an assessment as I'm dyslexic, is there some kind of text-to-speech thing RMIT can set me up with?",
+            "chunks": ["EAA-02_46"],
+            "answer": [
+                "For text-to-speech, RMIT recommends using Immesrsive Reader through Microsoft Edge.",
+                "Other popular screen reading tools include: Speechify Natural Reader Mac VoiceOver User Guide"
+            ]
+        },
+        {
+            "prompt": "My mate got flagged for plagiarism because he reused part of an assignment he wrote for a different course last year, does RMIT actually define that as plagiarism?",
+            "chunks": ["POL-01_70"],
+            "answer": [
+                "RMIT does in fact consider self-plagiarism as a form of plagiarism.",
+                "To avoid self-plagiarising, your friend would need to reference their previous assignment properly.",
+                "However, many courses still do not allow self-referencing either."
+            ]
+        },
+        {
+            "prompt": "Who actually sets RMIT's official academic calendar each year? I'm trying to plan around census dates.",
+            "chunks": ["POL-01_67"],
+            "answer": [
+                "The university Secretary and Academic Regristrar are the ones responsible for approving the annual Academic Calendar."
+            ]
+        },
+        {
+            "prompt": "I missed a test because I was unwell, How long do I have to apply for special consideration? I have an EAA deferral thing in my plan.",
+            "chunks": ["SC-01_8", "EAA-02_43"],
+            "answer": [
+                "You must apply for special consideration within 5 working days after the assessment date or due date.",
+                "Since you have an Equitable Assessment Arrangement you can get the assessment deferred to a later date."
+            ]
+        },
+        {
+            "prompt": "My nan just passed away but I've got a group assignment due friday, can I even apply for an extension on something like this? How much extra time could I get?",
+            "chunks": ["POL-01_62", "EXT-01_1"],
+            "answer": [
+                "Yes, group assignments (like assignments, essays and projects that have a deadline) are eligible for an extension; only timed assessments such as tests and exams are not.",
+                "Extensions can be approved for up to one week (seven calendar days) after the due date.",
+                "You must apply to your school at least one working day before the due date."
+            ]
+        },
+        {
+            "prompt": "I think my tutor marked me down assuming I plagiarised, very upset about this because I definitely didn't, how should I go about correcting this issue?",
+            "chunks": ["POL-01_58", "POL-01_59"],
+            "answer": [
+                "You can request a review of your assessment result (or appeal your final course grade) through the appeals process set out in the Assessment Processes.",
+                "You can request a copy of your marked assessment if it hasn't been returned to you.",
+                "Allegations of academic misconduct are handled under the Student Conduct Policy, and staff are meant to take an educative approach to academic integrity.",
+                "You should keep a copy of all work you submitted until your final result is released, which can help show authorship and originality."
+            ]
+        },
+        {
+            "prompt": "The extensions adjustment is on my ELP, but the assignment brief also says to fill out the standard extension form, do I need to do both, or is my learning plan enough on its own",
+            "chunks": ["EXT-01_2", "EAA-02_39"],
+            "answer": [
+                "Your Equitable Learning Plan is the only evidence you need to provide for an extension.",
+                "You may still need to fill out the school's extension form if your School requires it.",
+                "You do not need to provide a medical certificate or any additional evidence.",
+                "You must apply at least one working day before the assessment deadline."
+            ]
+        },
+        {
+            "prompt": "My first ever uni exams are in about 5 weeks and I only just found out ELS exists because of my anxiety. Am I too late to register for exam adjustments, and what will they want from me?",
+            "chunks": ["EAA-01_18"],
+            "answer": [
+                "You must register with Equitable Learning Services (ELS) to access an Equitable Assessment Arrangement.",
+                "It is recommended you register at least six weeks before a major timed assessment (or four weeks before your first assessment task).",
+                "If you register after that time, ELS may not be able to offer the full range of assistance.",
+                "You will need supporting documentation from a treating health practitioner (e.g. doctor, psychologist or social worker) registered with a recognised professional body."
+            ]
+        },
+        {
+            "prompt": "I've got four assignments this semester and ELS gave me the extensions adjustment on my ELP. I already used an extension on assignment 1, have I burned my one chance for the whole subject or can I still use it on assignment 2?",
+            "chunks": ["EAA-02_37"],
+            "answer": [
+                "Yes, you can still request an extension for assignment 2, as the ELP allows one extension per assessment rather than one per course.",
+                "If your course has 4 assessments, you can request 4 extensions (one for each assessment).",
+                "You cannot request more than one extension for the same assessment using your ELP."
+            ]
+        },
+        {
+            "prompt": "Honestly I've been so stressed with uni lately that I'm barely sleeping and I think I need to talk to someone. I'm at City campus, is there a counselling service at RMIT and where could I see someone without paying a fortune?",
+            "chunks": ["EAA-02_52"],
+            "answer": [
+                "RMIT Counselling and Psychological Services offers free, confidential, professional short-term counselling for issues like anxiety, depression and stress.",
+                "Medical Hub @ RMIT (City campus) provides GP medical care with mixed/bulk-billing.",
+                "You can browse all of RMIT's health and wellbeing supports on the Health, safety and wellbeing page."
+            ]
+        },
+        {
+            "prompt": "Results for my last semester still haven't come out and I'm freaking out. Who actually signs off on results and who decides when they get released?",
+            "chunks": ["POL-01_60"],
+            "answer": [
+                "Course assessment committees review and approve results for courses.",
+                "The University Secretary and Academic Registrar sets the schedule for the publication of results.",
+                "Deans/Heads of School/Cluster Directors are responsible for submitting results in accordance with the schedule set by the University Secretary and Academic Registrar."
+            ]
+        },
+        {
+            "prompt": "I've got a major essay due Monday and my flatmate, who's registered with ELS and has extensions on his plan, is in the same boat. What's the longest extension I could get as a regular student compared to what he could ask for?",
+            "chunks": ["EXT-01_0", "EAA-02_35"],
+            "answer": [
+                "Without an equitable arrangement, you can apply in advance for an extension of up to seven calendar days; if you need more than seven days you must apply for special consideration.",
+                "A student with an Equitable Assessment Arrangement for 'Extensions' can request a longer period (e.g. 10 or 14 days) if needed.",
+                "The length of an ELP extension depends on the impact of the condition on learning, the assessment weighting and the assessment format.",
+                "Extension lengths under an ELP may be negotiated with educators to make sure they are reasonable and appropriate."
+            ]
+        },
+        {
+            "prompt": "I'm in third year and have never needed ELS before, but my anxiety has gotten way worse this semester. Can I still sign up now even though I'm not a new student? I've also heard there's some cut-off before finals for changing adjustments, what's that about?",
+            "chunks": ["EAA-02_24", "EAA-02_20"],
+            "answer": [
+                "Yes, you can request ELS support at any time during your studies, even if you're not a new student.",
+                "You should send an enquiry to ELS outlining your circumstances so an ELS Advisor can discuss next steps with you.",
+                "Each semester there is a cut-off date for making changes to assessment adjustments, usually 2-3 weeks before the final assessment period.",
+                "If the cut-off date has passed, you may still be able to request an extension or special consideration."
+            ]
+        },
+        {
+            "prompt": "My ELP runs out at the end of this semester and I've also got a brand new tutor starting next term who knows nothing about my plan. What do I need to do about both?",
+            "chunks": ["EAA-02_21", "EAA-02_23"],
+            "answer": [
+                "If your Equitable Learning Plan expires, you can contact ELS to renew it.",
+                "You may need to provide documentation confirming your disability/condition is ongoing and/or continues to impact your studies.",
+                "You are expected to email your Equitable Learning Plan to new teaching staff throughout the academic year.",
+                "If you're concerned your plan isn't being followed, speak to your teachers first, and contact ELS immediately if it still isn't being followed."
+            ]
+        },
+        {
+            "prompt": "I'm registering with ELS and applying for special consideration at the same time, and my mum's friend, who's a registered psychologist, offered to write me one letter for both. Will that actually be accepted, and what does it need to include?",
+            "chunks": ["EAA-02_31", "SC-01_10"],
+            "answer": [
+                "ELS does not accept supporting documentation from relatives or friends.",
+                "ELS documentation must be completed by a qualified health professional registered with a recognised board (e.g. Medicare or AHPRA), such as a registered psychologist, psychiatrist, treating GP or accredited mental health social worker.",
+                "For special consideration, supporting documents must be formal, independent and verifiable; a personal statement alone is not sufficient.",
+                "Special consideration documents must be dated and include the name and contact details of the person providing the evidence so RMIT can verify them."
+            ]
+        },
+        {
+            "prompt": "I got an email saying I'm 'at risk' of unsatisfactory academic progress and I'm panicking about being excluded. Who decides that, and if I narrowly fail my very last course, is there any chance of a supplementary assessment so I can still finish my degree?",
+            "chunks": ["POL-01_65", "POL-01_66"],
+            "answer": [
+                "The chair of the program assessment board determines the stage of unsatisfactory progress (first stage is 'at risk'; the final stage is established unacceptable progress in more than one teaching period).",
+                "Where a student is identified as at risk, there must be an intervention offering academic advice and support to improve their performance.",
+                "At the final at-risk stage you must show cause why you should be permitted to continue, and the board decides whether to let you continue or recommend exclusion.",
+                "You may appeal a decision to exclude you for established unacceptable academic progress.",
+                "Program assessment boards can approve a supplementary assessment where a student has narrowly failed one course in the last teaching period to complete their program."
+            ]
+        },
+        {
+            "prompt": "I've got ADHD and I can never keep up taking notes in lectures, and typing out my essays is wrecking my wrists. Are there any free tools for recording classes and for dictating my writing instead of typing?",
+            "chunks": ["EAA-02_49", "EAA-02_47"],
+            "answer": [
+                "Otter can record and automatically transcribe classes in real time; the free basic version gives 300 monthly transcription minutes (30 minutes per conversation).",
+                "OneNote can record audio or video notes in lectures and classes.",
+                "Google Docs has voice typing: go to Tools > Voice typing and click the microphone box to record.",
+                "In Microsoft Word you can use Home > Dictate while signed into Microsoft 365 on a mic-enabled device."
+            ]
+        },
+        {
+            "prompt": "I've got a long-term illness and my GP reckons I should get an EAA for my exams. Does that mean my exams get made easier, and who actually decides what adjustments I end up with?",
+            "chunks": ["EAA-01_17", "POL-01_64"],
+            "answer": [
+                "No, an EAA does not weaken or lower the academic standard being assessed; students must still meet the inherent requirements of their course and program.",
+                "An EAA adjusts the conditions or format of an assessment, e.g. additional reading/assessment time, rest breaks, or using a computer for a paper-based exam.",
+                "You apply to Equitable Learning Services, who authorise the arrangement and make recommendations to the relevant Program Manager.",
+                "Course coordinators determine the final form of assessment for their courses, which must take into account the recommended adjustments.",
+                "RMIT cannot guarantee a full range of options; timeframes, resource constraints and professional body registration requirements may limit what is available."
+            ]
+        },
+        {
+            "prompt": "I've got a hurdle test next week and I've just ended up in hospital. I'm doing great in the rest of the subject, so what are my options, and does failing a hurdle really mean I fail the whole course even if my overall mark is fine?",
+            "chunks": ["POL-01_57", "SC-01_6"],
+            "answer": [
+                "Yes, if you fail a hurdle assessment you fail the course regardless of your overall course mark.",
+                "Hurdle assessments are used in higher education only where required by safety or professional accreditation, registration or licensing requirements, and must be identified in the course guide.",
+                "You may be eligible to apply for special consideration because of unexpected circumstances outside your control.",
+                "Possible outcomes include an equivalent assessment or a deferred assessment (an opportunity to sit the assessment at a later date)."
+            ]
+        }
+    ]
+}
